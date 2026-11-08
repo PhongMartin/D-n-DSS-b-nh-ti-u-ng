@@ -1,0 +1,16 @@
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+joblib>=1.3
+xgboost>=2.1
+lightgbm>=4.3          # bắt buộc: Giai đoạn 3 dùng TreeSHAP của LightGBM (pred_contrib), không cần thư viện shap
+imbalanced-learn>=0.12 # tùy chọn: nếu không dùng được, dss_utils.py tự dùng SMOTENC cài đặt riêng
+jupyter>=1.0
+streamlit>=1.40        # giao diện (app.py)
+openpyxl>=3.1          # xuất Excel trong giao diện
+pyarrow>=15.0          # bắt buộc: pandas cần pyarrow khi nạp models/Phase3_system.joblib (X_ref lưu dạng Arrow)
+# Tùy chọn (Explainable Boosting Machine, đặt INCLUDE_EBM = True trong notebook Giai đoạn 2):
+# interpret>=0.6
